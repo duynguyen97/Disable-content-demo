@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Animated Animation</h1>
+		<button class="accordion" type="button">Section1</button>
+		<div class="panel">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+		<button class="accordion" type="button">Section2</button>
+		<div class="panel">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+		<button class="accordion" type="button">Section3</button>
+		<div class="panel">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+	</div>
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+		for(i=0; i< acc.length; i++){
+			acc[i].onclick = function(){
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling; // tra ve element tiep theo thuoc cung nhanh
+				if(panel.style.maxHeight ){
+					panel.style.maxHeight =null;
+				}else{
+					// scrollHeight tra ve chieu cao cua 1 phan tu
+					panel.style.maxHeight = panel.scrollHeight +"px";
+				}
+			}
+		}
+	</script>
+</body>
+</html>
